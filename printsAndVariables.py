@@ -42,8 +42,17 @@ print("bool")
 print("Value stored: ", x)
 print("Result of type function: ", type(x), "\n\n") #to get and print data type of X
 
-#a way to print string
+#concatenating strings
 print("Another way to print, concatenating strings: ")
 salute = "Hi! my name is"
 name = "Luis"
 print(salute + " " + name)
+#the same but using comas
+print(salute," ",name,"\n\n")
+
+#simple way to convert between data types
+x = "1"
+y = "2"
+print(x + y) #this wont work as an addition
+z = int(x) + int(y) # Z = X + Y as integers
+print(z,"\n\n")
