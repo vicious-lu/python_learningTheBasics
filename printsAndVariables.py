@@ -14,3 +14,10 @@ z = x + y
 print(z)
 print(x)
 print(y)
+
+#how to get the memory location of a variable
+g = 2
+print(id(g)) #this way it prints the memory location instead of the varibale stored itself
+print(id(y))
+print(id(x))
+print(id(z))
