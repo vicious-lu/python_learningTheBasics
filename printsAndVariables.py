@@ -27,9 +27,17 @@ print(id(x))
 print(id(z))
 print("\n\n")
 
-#data types
+#data types: int, string and bool
 print("Data types and function (type):")
 x = 10 #int
 print("Int")
+print("Value stored: ", x)
+print("Result of type function: ", type(x), "\n") #to get and print data type of X
+x = "Ten" #string
+print("String")
+print("Value stored: ", x)
+print("Result of type function: ", type(x), "\n") #to get and print data type of X
+x = True #bool, the first char must be Uppercase
+print("bool")
 print("Value stored: ", x)
 print("Result of type function: ", type(x), "\n") #to get and print data type of X
