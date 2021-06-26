@@ -51,6 +51,7 @@ print(salute + " " + name)
 print(salute," ",name,"\n\n")
 
 #simple way to convert between data types
+print("Simple way to convert data types")
 x = "1"
 y = "2"
 print(x + y) #this wont work as an addition
