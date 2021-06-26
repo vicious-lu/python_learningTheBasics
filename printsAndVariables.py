@@ -40,4 +40,10 @@ print("Result of type function: ", type(x), "\n") #to get and print data type of
 x = True #bool, the first char must be Uppercase
 print("bool")
 print("Value stored: ", x)
-print("Result of type function: ", type(x), "\n") #to get and print data type of X
+print("Result of type function: ", type(x), "\n\n") #to get and print data type of X
+
+#a way to print string
+print("Another way to print, concatenating strings: ")
+salute = "Hi! my name is"
+name = "Luis"
+print(salute + " " + name)
