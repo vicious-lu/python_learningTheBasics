@@ -9,7 +9,8 @@ print("\n\n")
 #with an index
 print(fruits[0])
 print("\n\n")
-#all that we see in lists applies to tuples
+
+#all that we see in lists applies to tuples except adding elemtns and deleting them
 
 #print all elements separated with no format of list
 for tuple in fruits:
@@ -20,5 +21,5 @@ print("\n\n")
 print(fruits)
 listFruits = list(fruits)
 listFruits[0] = 'apples'
-fruits = tuple(listFruits)
-print(fruits)
+#fruits = tuple(listFruits)
+#print(fruits)
