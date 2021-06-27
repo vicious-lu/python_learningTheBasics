@@ -23,10 +23,10 @@ for i in range(6):
     if i % 2 == 0:
         print(i)
     continue # this ignores the rest of the for and goes to the next iteration
-    print('I will never get to console.')
+    print('I will never get to console.') #thats why this never gets to console
 print('odd values:')
 for i in range(6):
     if i % 2 != 0:
         print(i)
     continue # this ignores the rest of the for and goes to the next iteration
-    print('I will never get to console.')
+    print('I will never get to console.') #thats why this never gets to console
