@@ -1,7 +1,16 @@
 class GeometricFigure:
     def __init__(self, lenght, width) -> None:
-        self._lenght = lenght
-        self._width = width
+        #simple validations, lenght
+        if 0 < lenght < 10:
+            self._lenght = lenght
+        else:
+            self._lenght = 0
+        
+        #simple validations, width
+        if 0 < width < 10:
+            self._width = width
+        else:
+            self.width = 0
     
     def __str__(self) -> str:
         return f'GeometricFigure: [ Lenght: {self._lenght}, Width: {self._width} ]'
@@ -65,7 +74,3 @@ class Rectangle(GeometricFigure, Color):
     def getArea(self):
         return self._width * self._lenght
     pass
-
-bigRectangle = Rectangle(15, 15, 'red')
-print(bigRectangle)
-bigRectangle.getArea()
