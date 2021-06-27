@@ -50,7 +50,7 @@ class PersonWithGetAndSet:
 
     def tellData(self):
         print(f'name: {self._name} \nsurname: {self._surname} \nage: {self._age}')
-
+    
     pass
 
 person2 = PersonWithGetAndSet('Luis', 'Saucedo', 23)
@@ -60,3 +60,4 @@ person2.name = 'Alejandro'
 person2.surname = 'Devora'
 person2.age = '56'
 print(person2.name, person2.surname, person2.age)
+print(__name__)
