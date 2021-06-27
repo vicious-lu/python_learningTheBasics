@@ -68,3 +68,14 @@ res = not a
 print(f'not a   =   {res}')
 res = not b
 print(f'not b   =   {res}\n\n')
+
+#check the age of someone to see the correct typo for them
+age = int(input('enter your age: '))
+twenties = age >= 20 and age < 30
+thirties = age >= 30 and age < 40
+print(f'Twenties: {twenties}')
+print(f'thirties: {thirties}\n')
+if twenties or thirties:
+    print("You're on your 20's or 30's")
+else:
+    print("You're not on your 20's or 30's")
