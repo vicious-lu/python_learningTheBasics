@@ -42,26 +42,33 @@ print(person2.age)
 
 #this class has a method to print its data_____________________________________________
 class PersonWithMethods:
-    def __init__(self, name, surname, age):
+    def __init__(self, name, surname, age, *args, **kargs):
         self.name = name
         self.surname = surname
         self.age = age
-        pass
+        self.args = args
+        self.kargs = kargs
+
 
     def tellData(self):
         print(f'''
 name    =   {self.name}
 surname =   {self.surname}
 age     =   {self.age}
+args    =   {self.args}
+kargs   =   {self.kargs}
         ''')
         pass
 
 person4 = PersonWithMethods('Luis', 'Saucedo', 23)
 person4.tellData()
 
+person5 = PersonWithMethods('George', 'Washington', '45', 'element1', 45, 'element3', 56, 'element4', OK = '0 Kills', LOL = 'Laughting Out Loud')
+person5.tellData()
+
 #we can also use the method from the object and pass the object as a reference
-PersonWithMethods.tellData(person4)
+# PersonWithMethods.tellData(person4)
 
 #we can add atributes on the go
-person4.cellphone = 6567049006 #this is not on the class
-print(person4.cellphone)
+# person4.cellphone = 6567049006 #this is not on the class
+# print(person4.cellphone)
