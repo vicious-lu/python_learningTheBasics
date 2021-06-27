@@ -43,3 +43,12 @@ def listNames(*names): #* is for when we dont know how many elements we will sen
         print(name)
 
 listNames('Luis Saucedo', 'Fred Jhones', 'Fredrich Nietzsche')
+print('\n')
+
+
+#dictionaries in functions
+def listElements(**terms):
+    for key, value in terms.items():
+        print(f'{key}: {value}')
+
+listElements(IDE='Integrated Development Enviroment', PK = 'Primary Key', DBMS = 'Database Management System')
