@@ -67,4 +67,4 @@ print(f'a or b =   {res}')
 res = not a
 print(f'not a   =   {res}')
 res = not b
-print(f'not b   =   {res}')
+print(f'not b   =   {res}\n\n')
