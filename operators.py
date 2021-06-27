@@ -54,4 +54,17 @@ print(f'a >= b  =   {res}')
 res = a < b #is a minor than b?
 print(f'a < b   =   {res}')
 res = a <= b #is a minor or equal than b?
-print(f'a <= b  =   {res}')
+print(f'a <= b  =   {res}\n\n')
+
+#logic operators
+a = True
+b = False
+print(f'a = {a}, b = {b}')
+res = a and b
+print(f'a and b =   {res}')
+res = a or b
+print(f'a or b =   {res}')
+res = not a
+print(f'not a   =   {res}')
+res = not b
+print(f'not b   =   {res}')
