@@ -1,8 +1,11 @@
 #define tuple
-twople = (13, 1, 8, 3, 2, 5, 8)
-#create list
-twopleList = []
+staticList = (13, 1, 8, 3, 2, 5, 8)
+#creating a list
+dinamicList = []
+
 for number in twople:
     if number < 5:
-        twopleList.append(number)
-print(twopleList)
+        dinamicList.append(number)
+
+#printing the list
+print(dinamicList)
