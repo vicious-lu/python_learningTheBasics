@@ -9,11 +9,12 @@ class Person:
 
     pass
 
-person1 = Person('Joel', 'Lopez', 45)
-person1.__name = 'Luis'
+if __name__ == '__main__':
+    person1 = Person('Joel', 'Lopez', 45)
+    person1.__name = 'Luis'
 
-person1.tellData()
-print('\n\n')
+    person1.tellData()
+    print('\n\n')
 
 
 #Get and Set _______________________________________________________________________________________________________
@@ -51,13 +52,16 @@ class PersonWithGetAndSet:
     def tellData(self):
         print(f'name: {self._name} \nsurname: {self._surname} \nage: {self._age}')
     
+    def __del__(self):
+        print(f'Deleting PersonWithGetAndSet.\nName: {self._name}\nSurname: {self._surname}')
+    
     pass
 
-person2 = PersonWithGetAndSet('Luis', 'Saucedo', 23)
-print(person2.name) #theres no atribute called name and we still can use it like so
-#now that we have a setter we can change the atribute normally
-person2.name = 'Alejandro'
-person2.surname = 'Devora'
-person2.age = '56'
-print(person2.name, person2.surname, person2.age)
-print(__name__)
+if __name__ == '__main__':
+    person2 = PersonWithGetAndSet('Luis', 'Saucedo', 23)
+    print(person2.name) #theres no atribute called name and we still can use it like so
+    #now that we have a setter we can change the atribute normally
+    person2.name = 'Alejandro'
+    person2.surname = 'Devora'
+    person2.age = '56'
+    print(person2.name, person2.surname, person2.age)

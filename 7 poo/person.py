@@ -1,3 +1,5 @@
+from encapsulation import PersonWithGetAndSet
+
 #the file gets its name for the class were creating_________________________________________________________
 class Person:
     def __init__(self,): #kind of a contructor
@@ -19,7 +21,7 @@ class AnotherPerson:
         self.name = name
         self.surname = surname
         self.age = age
-        pass
+        
 
 person2 = AnotherPerson('Luis', 'Saucedo', 23) #here we define the data for the object
 print(person2.name) #this prints "Luis"
@@ -58,13 +60,15 @@ age     =   {self.age}
 args    =   {self.args}
 kargs   =   {self.kargs}
         ''')
-        pass
+
+
 
 person4 = PersonWithMethods('Luis', 'Saucedo', 23)
 person4.tellData()
 
 person5 = PersonWithMethods('George', 'Washington', '45', 'element1', 45, 'element3', 56, 'element4', OK = '0 Kills', LOL = 'Laughting Out Loud')
 person5.tellData()
+print('\n')
 
 #we can also use the method from the object and pass the object as a reference
 # PersonWithMethods.tellData(person4)
@@ -72,3 +76,6 @@ person5.tellData()
 #we can add atributes on the go
 # person4.cellphone = 6567049006 #this is not on the class
 # print(person4.cellphone)
+
+person6 = PersonWithGetAndSet('Luis', 'Saucedo', 23)
+del person6
