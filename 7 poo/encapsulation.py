@@ -13,3 +13,31 @@ person1 = Person('Joel', 'Lopez', 45)
 person1.__name = 'Luis'
 
 person1.tellData()
+print('\n\n')
+
+
+#Get and Set _______________________________________________________________________________________________________
+class PersonWithGetAndSet:
+    def __init__(self, name, surname, age) -> None:
+        self._name = name # if we want to really protect the data we need to use __ before an atribute
+        self.surname = surname
+        self.age = age
+    
+    @property  #this is for setting the method name() like an atribute
+    def name(self):
+        return self._name
+
+    @name.setter #this way we can still change the atribute
+    def name(self, name):
+        self._name = name
+
+    def tellData(self):
+        print(f'name: {self._name} \nsurname: {self.surname} \nage: {self.age}')
+
+    pass
+
+person2 = PersonWithGetAndSet('Luis', 'Saucedo', 23)
+print(person2.name) #theres no atribute called name and we still can use it like so
+#now that we have a setter we can change the atribute normally
+person2.name = 'Alejandro'
+print(person2.name)
