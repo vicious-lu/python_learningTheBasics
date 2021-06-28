@@ -1,4 +1,5 @@
 from encapsulation import PersonWithGetAndSet
+from constants import Math
 
 #the file gets its name for the class were creating_________________________________________________________
 class Person:
@@ -79,3 +80,37 @@ print('\n')
 
 person6 = PersonWithGetAndSet('Luis', 'Saucedo', 23)
 del person6
+
+
+#static methods and class methods
+class ExampleStaticMethods:
+    classVariable = 'Class Variable Value'
+
+    def __init__(self, instanceVariable) -> None:
+        self.instanceVariable = instanceVariable
+    
+    @staticmethod
+    def staticMethod(): #this cant access self data
+        print(ExampleStaticMethods.classVariable)
+
+    @classmethod
+    def classMethod(cls):
+        print(cls.classVariable)
+
+    def instanceMethod(self):
+        self.classMethod()
+        self.staticMethod()
+        print(self.classVariable)
+        print(self.instanceVariable)
+
+if __name__ == '__main__':
+    ExampleStaticMethods.staticMethod()
+    ExampleStaticMethods.classMethod()
+
+    myObject = ExampleStaticMethods('instance value')
+    myObject.classMethod()
+    myObject.staticMethod()
+
+
+#constants in classes
+print(Math.PI)
