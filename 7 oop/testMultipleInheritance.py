@@ -1,5 +1,8 @@
 from practiceMultipleInheritance import *
 
 print(' Creating object: bigRectangle '.center(60,'-'))
-bigRectangle = Rectangle(50, 502, 'red')
+bigRectangle = Rectangle()
 print(bigRectangle)
+
+# we cant instance an abstract class
+# figure = GeometricFigure()

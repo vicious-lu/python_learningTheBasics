@@ -1,4 +1,6 @@
-class GeometricFigure:
+from abc import ABC, abstractclassmethod, abstractmethod
+
+class GeometricFigure(ABC): #add ABC
     def __init__(self, lenght, width) -> None:
         #simple validations, lenght
         if self._setterValidation(lenght):
@@ -39,6 +41,10 @@ class GeometricFigure:
            self._width = width
         else:
             self._width = 0
+    
+    @abstractmethod #add area abstract method
+    def area(self):
+        pass
     pass
 
 
@@ -67,7 +73,7 @@ class Square(GeometricFigure, Color):
         # return f'Square: [ Lenght = {self._lenght}, Width = {self._width}, Color = {self._color}  ]'
         return f'{GeometricFigure.__str__(self)} {Color.__str__(self)}'
 
-    def getArea(self):
+    def getarea(self):
         return self._width * self._lenght
     pass
 
@@ -80,6 +86,6 @@ class Rectangle(GeometricFigure, Color):
         # return f'Rectangle: [ Lenght = {self._lenght}, Width = {self._width}, Color = {self._color}  ]'
         return f'{GeometricFigure.__str__(self)} {Color.__str__(self)}'
 
-    def getArea(self):
+    def area(self):
         return self._width * self._lenght
     pass
