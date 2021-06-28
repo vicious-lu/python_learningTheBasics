@@ -1,13 +1,13 @@
 class GeometricFigure:
     def __init__(self, lenght, width) -> None:
         #simple validations, lenght
-        if 0 < lenght < 10:
+        if self._setterValidation(lenght):
             self._lenght = lenght
         else:
             self._lenght = 0
         
         #simple validations, width
-        if 0 < width < 10:
+        if self._setterValidation(width):
             self._width = width
         else:
             self.width = 0
@@ -15,6 +15,9 @@ class GeometricFigure:
     def __str__(self) -> str:
         return f'GeometricFigure: [ Lenght: {self._lenght}, Width: {self._width} ]'
     
+    def _setterValidation(self, value):
+        return True if 0 < value < 10 else False
+
     @property
     def lenght(self):
         return self._lenght
@@ -25,11 +28,17 @@ class GeometricFigure:
 
     @lenght.setter
     def lenght(self, lenght):
-        self._lenght = lenght
+        if self._setterValidation(lenght):
+            self._lenght = lenght
+        else:
+            self._lenght = 0
     
     @width.setter
     def width(self, width):
-        self._width = width
+        if self._setterValidation(width):
+           self._width = width
+        else:
+            self._width = 0
     pass
 
 
