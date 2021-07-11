@@ -5,3 +5,6 @@ class Employee:
 
     def __str__(self) -> str:
         return f'Employee: [ Name: {self.name}, Salary: {self.salary} ]'
+
+    def printDetail(self):
+        return self.__str__()
